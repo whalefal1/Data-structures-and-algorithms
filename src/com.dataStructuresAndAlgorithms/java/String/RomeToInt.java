@@ -15,12 +15,17 @@ public class RomeToInt {
         put('M', 1000);
     }};
 
-
     public int romanToInt(String s) {
-        char[] charArray = s.toCharArray();
-        int n = charArray.length;
-        for (int i = 0; i < n; i++) {
-
+        int ans = 0;
+        int n = s.length();
+        for (int i = 0; i < n; ++i) {
+            int value = symbolValues.get(s.charAt(i));
+            if (i < n - 1 && value < symbolValues.get(s.charAt(i + 1))) {
+                ans -= value;
+            } else {
+                ans += value;
+            }
         }
+        return ans;
     }
 }
