@@ -9,7 +9,7 @@ public class Edge {
 
         //边的终顶点
         Vertex linked;
-        //边的权重
+         //边的权重
         int weight;
 
     public Edge(Vertex linked, int weight) {
