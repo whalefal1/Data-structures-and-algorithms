@@ -18,5 +18,6 @@ public class MarsCode {
         System.out.println(solution(44, 5) == 544);
         System.out.println(solution(666, 6) == 6666);
         System.out.println(solution(9, 15) == 915);
+
     }
 }
