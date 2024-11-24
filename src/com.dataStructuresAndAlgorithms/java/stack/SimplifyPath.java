@@ -131,21 +131,28 @@ public class SimplifyPath {
 
 
     public static  String simplifyPath1(String path) {
+        //将字符串按/分隔，存在三种情况：字母 . . .  和空字符（因为存在//的情况）
         String[] names = path.split("/");
+        //需要回溯曾经遍历过的元素（/abc/../->/），使用栈进行存储
         Deque<String> stack = new ArrayDeque<String>();
         for (String name : names) {
+            //当为. . 时，需要回溯
             if ("..".equals(name)) {
+                //此时. .还未入栈，直接删除..之前的一个目录路径
                 if (!stack.isEmpty()) {
                     stack.pollLast();
                 }
             } else if (name.length() > 0 && !".".equals(name)) {
+                //当不为..时即不需要处理，直接入栈
                 stack.offerLast(name);
             }
         }
         StringBuffer ans = new StringBuffer();
         if (stack.isEmpty()) {
+            //首元素为/
             ans.append('/');
         } else {
+            //每次出栈一个元素就增加一个/
             while (!stack.isEmpty()) {
                 ans.append('/');
                 ans.append(stack.pollFirst());
