@@ -22,7 +22,7 @@ public class IsSymmetric {
         if (left == null || right == null) {
             return false;
         }
-        return left.val == right.val && check(left.leftChild, right.rightChild) && check(left.rightChild, right.rightChild);
+        return left.val == right.val && check(left.leftChild, right.rightChild) && check(left.rightChild, right.leftChild);
     }
 
     //递推方法——使用双向队列：左子树从队首进入，从队首出；右子树从队尾进入，从对尾出，需要注意入队顺序
