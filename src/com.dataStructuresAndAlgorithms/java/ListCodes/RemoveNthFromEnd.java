@@ -2,6 +2,8 @@ package ListCodes;
 /*
 删除倒数第n个节点
 虚拟头节点方法
+
+滑动窗口法，定义一固定长为n的窗口
  */
 public class RemoveNthFromEnd {
     public ListNode solution(ListNode head,int n) {
