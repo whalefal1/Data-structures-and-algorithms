@@ -14,7 +14,12 @@ public class GetMinimumDifference {
          this.right = right;
      }
  }
+
+
+
+    //双亲节点的值
     int pre;
+    //最小值
     int ans;
 
     public int getMinimumDifference(TreeNode root) {
@@ -28,10 +33,13 @@ public class GetMinimumDifference {
         if (root == null) {
             return;
         }
+        //中序遍历
         dfs(root.left);
         if (pre == -1) {
+            //当pre==-1时表示此节点为根节点，直接赋值
             pre = root.val;
         } else {
+            //
             ans = Math.min(ans, root.val - pre);
             pre = root.val;
         }
