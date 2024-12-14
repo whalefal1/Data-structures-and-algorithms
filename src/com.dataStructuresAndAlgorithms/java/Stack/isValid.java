@@ -1,4 +1,4 @@
-package stack;
+package Stack;
 
 /*
 有效的括号

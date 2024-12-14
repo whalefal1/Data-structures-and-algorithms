@@ -1,4 +1,4 @@
-package stack;
+package Stack;
 
 //顺序栈的实现
 

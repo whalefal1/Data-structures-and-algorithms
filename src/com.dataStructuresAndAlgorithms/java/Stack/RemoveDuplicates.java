@@ -1,4 +1,4 @@
-package stack;
+package Stack;
 
 public class RemoveDuplicates {
     public String removeDuplicates(String s) {

@@ -1,4 +1,4 @@
-package stack;
+package Stack;
 
 //链栈的实现
 public class LinkedStock <E>{
